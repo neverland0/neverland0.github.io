@@ -1,8 +1,7 @@
 ---
-layout: default
-title: 你好，世界
+layout: item
+title: test
 ---
-# 开始 ：blush：
 ## 无序列表
 - abc
 - abc
@@ -11,7 +10,7 @@ title: 你好，世界
 1. a
 2. b
 3. c
-###人不为己，天诛地灭
+> 人不为己，天诛地灭
 
 ## 插入链接
 [baidu](www.baidu.com)
