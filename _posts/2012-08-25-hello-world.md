@@ -1,8 +1,7 @@
 ---
-layout:default
+layout: default
 title: 你好，世界
 ---
-
 #开始
 ##无序列表
 - abc
