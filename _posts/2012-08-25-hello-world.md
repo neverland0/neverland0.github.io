@@ -21,3 +21,4 @@ title: 你好，世界
 ```c++ 
 	cout<<"hello world!";
 ```
+    `cout<<"hello world!";`
