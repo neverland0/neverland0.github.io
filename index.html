@@ -6,8 +6,8 @@ title: 我的Blog
 <p>最新文章</p>
 <div style="margin: 5% 10% 2% 10%">
 <ul class="list-group">
-　　{% for post in site.posts %}
-　　　　<li class="list-group-item title"> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-　　{% endfor %}
+{% for post in site.posts %}
+<li class="list-group-item title"> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
 </ul>
 </div>
