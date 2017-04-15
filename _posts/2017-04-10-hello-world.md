@@ -29,4 +29,4 @@ title: 测试markdown
 ```c++ 
 	cout<<"hello world!";
 ```
->
+插入代码时遇到了缩放不能自动换行的问题，参考[这篇文章](http://www.16sucai.com/2010/10/941.html)解决了问题。
