@@ -25,6 +25,7 @@ title: 使用libbacktrace获取堆栈信息
 - ./configure && make && make install
   完成安装。
   下面是主要接口说明，详细说明可以参考源文件中的backtrace.h.
+
 ```c++
 
 //保存backtrace状态的结构体
