@@ -19,6 +19,12 @@ var _hmt = _hmt || [];
 
 </head>
 <body>
+	 <script>
+        if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
+        {
+            document.body.classList.add('mobile');
+        }
+     </script>
 	<div style="margin: 2% 15% 2% 15%">
 		<div style="padding: 2% 8% 5% 8%;border:1px solid LightGrey;">
 			<h1>{{ page.title }}</h1>

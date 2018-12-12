@@ -20,6 +20,12 @@ var _hmt = _hmt || [];
 
 </head>
 <body>
+   <script>
+        if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
+        {
+            document.body.classList.add('mobile');
+        }
+     </script>
 <nav class="navbar navbar-default navbar-fixed-top" style="opacity: .9" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
