@@ -23,6 +23,7 @@ title: 使用libbacktrace获取堆栈信息
 
   下载后执行
 - ./configure && make && make install
+
   完成安装。
   下面是主要接口说明，详细说明可以参考源文件中的backtrace.h.
 
@@ -34,34 +35,35 @@ struct backtrace_state;
 //创建backtrace状态，必须最先被调用，而且返回值要传给backtrace_full()等例程。
 //第一个参数要指定当前可执行文件名。
 struct backtrace_state *backtrace_create_state (const char *filename, 
-    											int threaded,
-    											backtrace_error_callback 															error_callback, 
-    											void *data);
+                                                int threaded,
+                                                backtrace_error_callback,
+                                                error_callback, 
+                                                void *data);
 
 //主要使用的函数，调用该函数，传入之前得到的backtrace状态结构体，对于栈帧中每一帧都会调用回调函数一次。
 //在回调函数中会得到每一个栈帧需要的信息。
 int backtrace_full (struct backtrace_state *state, 
-					int skip,
-			   		backtrace_full_callback callback,
-			   		backtrace_error_callback error_callback,
-			   		void *data);
+                    int skip,
+                    backtrace_full_callback callback,
+                    backtrace_error_callback error_callback,
+                    void *data);
 
 //backtrace_full例程的回调函数，参数filename、lineno、function分别是当前栈帧中函数的文件名、行号、函数名。
 typedef int (*backtrace_full_callback) (void *data, 
-										uintptr_t pc,
-										const char *filename, 
-										int lineno,
-										const char *function);
+                                        uintptr_t pc,
+                                        const char *filename, 
+                                        int lineno,
+                                        const char *function);
 
 //backtrace_full例程的错误回调函数，当backtrace_full函数发生错误时，该函数被调用，可以不使用。
 typedef void (*backtrace_error_callback) (void *data, 
-										  const char *msg,
-					    				  int errnum);
+                                          const char *msg,
+                                          int errnum);
 ```
 
   使用方法：
   
-1. 先调用backtrace_create_state()例程，filename是可执行文件名，threaded非零表示支持多线程，否则只支持单线程。
+1. 先调用backtrace_create_state()例程，参数filename是可执行文件名，参数threaded非零表示支持多线程，否则只支持单线程。
 2. 将得到的返回值保存下来，在需要打印堆栈信息的地方调用backtrace_full()例程，第一个参数为之前得到的返回值，第三个参数为需要自己实现的回调函数，对于每一个栈帧，回调函数都会被调用一次。
 3. 在自己实现的回调函数中，参数filename、lineno、function分别为函数对应的文件名、行号、函数名，然后按照自己的需求处理即可。
 
