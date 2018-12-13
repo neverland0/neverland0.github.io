@@ -10,7 +10,7 @@ table {
 
 body {
     font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "Microsoft YaHei", "Songti SC", SimSun, Heiti, sans-serif;
-    font-size: 21px;
+    font-size: 23px;
 }
 
 body.mobile {
@@ -27,7 +27,7 @@ a.title {
     display: block;
     text-decoration: none;
     color: #006666;
-    border-bottom: 1px dashed orange;
+    line-height: 2;
 }
 
 a.title:hover {
