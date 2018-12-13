@@ -22,22 +22,17 @@ body.mobile {
     font-size: 100%;
 }
 
-.title a {
+a.title {
+    cursor: pointer;
+    display: block;
     text-decoration: none;
     color: #006666;
+    border-bottom: 1px dashed orange;
 }
 
-.title {
-    cursor: pointer;
-    padding: 5px 20px;
-    display: block;
-    
-}
-
-.title:hover {
+a.title:hover {
     background-color: #eee;
     font-size: 100%;
-    text-decoration: none;
 }
 
 .panel {

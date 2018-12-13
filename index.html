@@ -5,9 +5,7 @@ title: neverland
 
 <div class="list-group">
 {% for post in site.posts %}	
-	<div class="list-group-item title">
-		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-	</div>
+		<a class="list-group-item title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 {% endfor %}
 </div>
 
