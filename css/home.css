@@ -26,12 +26,14 @@ a.title {
     cursor: pointer;
     display: block;
     text-decoration: none;
-    color: #006666;
     line-height: 2;
 }
 
+.title-text{
+    color: #006666;
+}
+
 a.title:hover {
-    background-color: #eee;
     font-size: 100%;
 }
 
