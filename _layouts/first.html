@@ -7,6 +7,7 @@
 	<link href="https://neverland0.github.io/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" href="https://neverland0.github.io/favicon.ico">
 	<link rel="icon" href="https://neverland0.github.io/favicon.ico">
+  <script type="text/javascript" src="https://neverland0.github.io/js/jquery-3.3.1.min.js"></script>
 　　<title>强迫症患者的胡言乱语</title>
 <script>
 var _hmt = _hmt || [];
@@ -16,11 +17,9 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-function highlight(selector) {
-  alert("hello")
-        selector = ".logo"
+function highlight() {
         var speed = 50;
-        var obj = $(selector).stop(true, true)
+        var obj = $(".logo").stop(true, true)
         for (var i = 0; i < 5; i++) {
             obj.addClass("highlight", speed)
             obj.delay(speed)
