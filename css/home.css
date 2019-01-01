@@ -74,3 +74,8 @@ div.outer {
 body.mobile div.outer {
     margin: 4% 2% 2% 2%;
 }
+
+.highlight {
+    background: #b5533b !important;
+    color: yellow !important;
+}

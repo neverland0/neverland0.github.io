@@ -16,6 +16,15 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+function highlight(selector) {
+        var speed = 50;
+        var obj = $(selector).stop(true, true)
+        for (var i = 0; i < 5; i++) {
+            obj.addClass("highlight", speed)
+            obj.delay(speed)
+            obj.removeClass("highlight", speed)
+        }
+    }
 </script>
 
 </head>
@@ -36,7 +45,7 @@ var _hmt = _hmt || [];
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">强迫症患者的胡言乱语</a>
+            <a class="navbar-brand logo" href="javascript:highlight(".logo")" >强迫症患者的胡言乱语</a>
         </div>
 
         
